@@ -20,15 +20,13 @@ export default function RootLayout({
       <head>
         {/* --- Monetag Verification Meta Tag --- */}
         <meta name="monetag" content="99885763dbb8acd1382c34d3f99ea0d4" />
-      </head>
-      
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
-        {/* --- Google Analytics --- */}
+
+        {/* --- Google Analytics (Head) --- */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5E0X1B9N27"
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="beforeInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -37,6 +35,16 @@ export default function RootLayout({
           `}
         </Script>
 
+        {/* --- New Script (Head) --- */}
+        <Script 
+          src="https://quge5.com/88/tag.min.js" 
+          data-zone="222588" 
+          strategy="beforeInteractive"
+          data-cfasync="false"
+        />
+      </head>
+      
+      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <div className="isolate">
             <Header />
