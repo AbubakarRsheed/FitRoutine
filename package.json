@@ -4,8 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
+    "serve": "npx serve out",
     "postbuild": "next-sitemap",
     "lint": "next lint"
   },
@@ -29,6 +30,7 @@
     "autoprefixer": "^10.4.17",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "serve": "^14.2.0",
     "typescript": "^5.3.3"
   },
   "engines": {
