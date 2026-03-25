@@ -18,9 +18,13 @@ const Header = () => {
   const handleStickyNavbar = () => {
     setSticky(window.scrollY >= 80);
   };
+  
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    return () => {
+      window.removeEventListener("scroll", handleStickyNavbar);
+    };
+  }, []);
 
   // Submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -136,10 +140,10 @@ const Header = () => {
                               openIndex === index ? "block" : "hidden"
                             }`}
                           >
-                            {menuItem.submenu.map((submenuItem, index) => (
+                            {menuItem.submenu.map((submenuItem, idx) => (
                               <Link
                                 href={submenuItem.path}
-                                key={index}
+                                key={idx}
                                 className="text-dark hover:text-primary block rounded-sm py-2.5 text-sm lg:px-3 dark:text-white/70 dark:hover:text-white"
                               >
                                 {submenuItem.title}
@@ -154,7 +158,7 @@ const Header = () => {
               </nav>
             </div>
 
-            {/* Only Theme Toggler (Sign In/Up removed) */}
+            {/* Only Theme Toggler - Sign In/Up Removed */}
             <div className="flex items-center justify-end pr-16 lg:pr-0">
               <ThemeToggler />
             </div>

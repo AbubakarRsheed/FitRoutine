@@ -17,7 +17,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     };
   }
   
-  // Use SEO data if available, otherwise generate from blog data
   const metaTitle = blog.seo?.metaTitle || `${blog.title} | FitRoutine Fitness Blog`;
   const metaDescription = blog.seo?.metaDescription || blog.paragraph.slice(0, 160);
   const metaKeywords = blog.seo?.metaKeywords || blog.tags;
@@ -90,6 +89,11 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
   
   const readingTime = blog.readingTime || Math.ceil(blog.content.split(' ').length / 200);
   
+  // Current URL for sharing
+  const currentUrl = typeof window !== "undefined" 
+    ? window.location.href 
+    : `https://fitroutine.com/blog/${blog.slug}`;
+  
   return (
     <>
       <section className="pt-[150px] pb-[120px] bg-gray-50 dark:bg-gray-900">
@@ -146,7 +150,7 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
                   </div>
                 </div>
 
-                {/* Featured Image */}
+                {/* Featured Image with better display */}
                 <div className="mb-8 w-full overflow-hidden rounded-xl">
                   <div className="relative aspect-[16/9] w-full">
                     <Image
@@ -155,13 +159,14 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
                       fill
                       className="object-cover object-center"
                       priority
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
                     />
                   </div>
                 </div>
 
                 {/* Blog Content - Full Article */}
                 <div 
-                  className="blog-content prose prose-lg max-w-none dark:prose-invert mb-8"
+                  className="blog-content prose prose-lg max-w-none dark:prose-invert mb-8 prose-headings:text-gray-900 dark:prose-headings:text-white prose-a:text-primary hover:prose-a:text-primary/80 prose-img:rounded-lg prose-img:shadow-md"
                   dangerouslySetInnerHTML={{ __html: blog.content }}
                 />
 
@@ -190,7 +195,7 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
                   </div>
                 )}
 
-                {/* Tags and Share Section */}
+                {/* Tags and Share Section - WITH WORKING SHARE BUTTONS */}
                 <div className="items-center justify-between border-t border-body-color/10 pt-8 mt-8 dark:border-white/10 sm:flex">
                   <div className="mb-5">
                     <h4 className="text-body-color mb-3 text-sm font-medium">
@@ -208,7 +213,11 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
                       Share this post :
                     </h5>
                     <div className="flex items-center sm:justify-end">
-                      <SharePost />
+                      <SharePost 
+                        title={blog.title}
+                        url={currentUrl}
+                        image={blog.image}
+                      />
                     </div>
                   </div>
                 </div>
@@ -233,7 +242,7 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
                               src={relatedBlog.image}
                               alt={relatedBlog.title}
                               fill
-                              className="object-cover group-hover:scale-105 transition"
+                              className="object-cover group-hover:scale-105 transition duration-300"
                             />
                           </div>
                           <div>
@@ -251,7 +260,7 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
               </div>
             </div>
 
-            {/* Sidebar - Optional but good for SEO */}
+            {/* Sidebar - Good for SEO */}
             <div className="w-full px-4 lg:w-4/12 mt-8 lg:mt-0">
               <div className="sticky top-40">
                 {/* About Author Card */}
@@ -285,12 +294,13 @@ export default function BlogDetailsPage({ params }: { params: { slug: string } }
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {Array.from(new Set(blogData.flatMap(b => b.tags))).slice(0, 10).map((tag, index) => (
-                      <span
+                      <Link
                         key={index}
+                        href={`/blog/tag/${tag.toLowerCase().replace(/\s+/g, "-")}`}
                         className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full hover:bg-primary hover:text-white transition cursor-pointer"
                       >
-                        {tag}
-                      </span>
+                        #{tag}
+                      </Link>
                     ))}
                   </div>
                 </div>
