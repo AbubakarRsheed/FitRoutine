@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://fitroutine.online
+
+# Sitemaps
+Sitemap: https://fitroutine.online/sitemap.xml
