@@ -18,10 +18,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
-        {/* --- Monetag Verification Meta Tag --- */}
-        <meta name="monetag" content="99885763dbb8acd1382c34d3f99ea0d4" />
-
-        {/* --- Google Analytics (Head) --- */}
+        {/* --- Google Analytics --- */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5E0X1B9N27"
           strategy="beforeInteractive"
@@ -34,14 +31,6 @@ export default function RootLayout({
             gtag('config', 'G-5E0X1B9N27');
           `}
         </Script>
-
-        {/* --- New Script (Head) --- */}
-        <Script 
-          src="https://quge5.com/88/tag.min.js" 
-          data-zone="222588" 
-          strategy="beforeInteractive"
-          data-cfasync="false"
-        />
       </head>
       
       <body 
