@@ -130,7 +130,7 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Legal Column - PRIVACY POLICY & TERMS ADDED HERE */}
+            {/* Legal Column - Added DMCA Link */}
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
@@ -151,6 +151,14 @@ const Footer = () => {
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Terms & Conditions
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/dmca"
+                      className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
+                    >
+                      DMCA
                     </Link>
                   </li>
                   <li>
@@ -201,7 +209,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Bottom Section - PRIVACY & TERMS LINKS ADDED */}
+          {/* Footer Bottom Section - Added DMCA Link */}
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
@@ -223,6 +231,13 @@ const Footer = () => {
                   className="text-sm text-body-color hover:text-primary transition-colors dark:text-white/70 dark:hover:text-white"
                 >
                   Terms & Conditions
+                </Link>
+                <span className="text-body-color">|</span>
+                <Link 
+                  href="/dmca" 
+                  className="text-sm text-body-color hover:text-primary transition-colors dark:text-white/70 dark:hover:text-white"
+                >
+                  DMCA
                 </Link>
                 <span className="text-body-color">|</span>
                 <Link 

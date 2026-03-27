@@ -27,7 +27,7 @@ const AboutSectionOne = () => {
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
                 title="Your Journey to a Healthier Life Starts Here"
-                paragraph="At FitRoutine, we believe fitness should be simple, practical, and achievable for everyone. Whether you want to lose weight, build muscle, eat better, or just feel stronger every day – we're here to guide you with honest advice and real plans that work."
+                paragraph="At FitRoutine, we believe fitness should be simple, practical, and achievable for everyone around the world. Whether you want to lose weight, build muscle, eat better, or just feel stronger every day – we're here to guide you with honest advice and real plans that work."
                 mb="44px"
               />
 
@@ -52,17 +52,14 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div className="relative mx-auto aspect-25/24 max-w-[500px] lg:mr-0">
+                {/* High-Quality Global Fitness Image */}
                 <Image
-                  src="/images/about/2.png"
-                  alt="FitRoutine fitness community - people exercising together"
+                  src="https://images.pexels.com/photos/3757950/pexels-photo-3757950.jpeg?auto=compress&cs=tinysrgb&w=800&h=800&fit=crop"
+                  alt="Diverse group of people doing fitness workout together - global fitness community"
                   fill
-                  className="mx-auto max-w-full drop-shadow-three dark:hidden dark:drop-shadow-none lg:mr-0"
-                />
-                <Image
-                  src="/images/about/2.png"
-                  alt="FitRoutine fitness and health community Pakistan"
-                  fill
-                  className="mx-auto hidden max-w-full drop-shadow-three dark:block dark:drop-shadow-none lg:mr-0"
+                  className="mx-auto max-w-full rounded-2xl object-cover drop-shadow-three dark:drop-shadow-none lg:mr-0"
+                  sizes="(max-width: 768px) 100vw, 500px"
+                  priority
                 />
               </div>
             </div>

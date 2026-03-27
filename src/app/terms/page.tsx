@@ -1,12 +1,12 @@
-import Footer from "@/components/Footer";
+
 import Header from "@/components/Header";
 import { Metadata } from "next";
 import Link from "next/link";
 
 // ========== SEO METADATA ==========
 export const metadata: Metadata = {
-  title: "Terms & Conditions | FitRoutine - Fitness & Health Platform",
-  description: "Read FitRoutine's terms of use. Learn about our fitness content, user guidelines, and platform policies.",
+  title: "Terms & Conditions | FitRoutine - Global Fitness & Health Platform",
+  description: "Read FitRoutine's terms of use. Learn about our fitness content, user guidelines, and platform policies for users worldwide.",
   keywords: [
     "terms and conditions",
     "fitness website terms",
@@ -17,18 +17,20 @@ export const metadata: Metadata = {
     "terms of service",
     "content usage rights",
     "fitness disclaimer",
-    "Pakistan fitness terms"
+    "global fitness terms",
+    "website terms",
+    "user guidelines"
   ],
   alternates: {
-    canonical: "https://fitroutine.com/terms",
+    canonical: "https://fitroutine.online/terms",
   },
   openGraph: {
     title: "Terms & Conditions | FitRoutine",
     description: "Understand the rules and guidelines for using FitRoutine fitness platform.",
-    url: "https://fitroutine.com/terms",
+    url: "https://fitroutine.online/terms",
     siteName: "FitRoutine",
     type: "website",
-    locale: "en_PK",
+    locale: "en_US",
   },
   robots: {
     index: true,
@@ -44,7 +46,7 @@ export default function TermsPage() {
       <Header />
       
       <main className="pt-40 pb-20 bg-gray-50 dark:bg-gray-900">
-        <div className="container">
+        <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             
             {/* Hero Section */}
@@ -62,7 +64,7 @@ export default function TermsPage() {
               </p>
               <div className="flex justify-center gap-4 mt-4 text-sm text-body-color">
                 <span>📅 Effective: {currentYear}</span>
-                <span>📍 Pakistan</span>
+                <span>🌍 Worldwide</span>
               </div>
             </div>
 
@@ -84,7 +86,7 @@ export default function TermsPage() {
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
                   FitRoutine provides fitness articles, workout ideas, nutrition tips, and general wellness information. 
-                  Our content is created for educational and informational purposes. We aim to help people lead healthier lives 
+                  Our content is created for educational and informational purposes. We aim to help people around the world lead healthier lives 
                   through reliable fitness guidance.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -192,19 +194,7 @@ export default function TermsPage() {
               {/* Section 7 */}
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-black dark:text-white mb-3 pb-2 border-b border-gray-200 dark:border-gray-700">
-                  7. Affiliate Links
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  Some links on FitRoutine may be affiliate links. This means if you click on them and make a purchase, 
-                  we may earn a small commission at no extra cost to you. This helps us keep the website running and continue 
-                  creating free content. We only recommend products we genuinely find useful.
-                </p>
-              </div>
-
-              {/* Section 8 */}
-              <div className="mb-8">
-                <h2 className="text-2xl font-bold text-black dark:text-white mb-3 pb-2 border-b border-gray-200 dark:border-gray-700">
-                  8. Our Responsibility
+                  7. Our Responsibility
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
                   We do our best to provide accurate and helpful information, but we cannot guarantee that everything on our site is complete or error-free. 
@@ -215,10 +205,10 @@ export default function TermsPage() {
                 </p>
               </div>
 
-              {/* Section 9 */}
+              {/* Section 8 */}
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-black dark:text-white mb-3 pb-2 border-b border-gray-200 dark:border-gray-700">
-                  9. Changes to These Terms
+                  8. Changes to These Terms
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   From time to time, we may update these terms. When we do, we will change the date at the top of this page. 
@@ -226,17 +216,17 @@ export default function TermsPage() {
                 </p>
               </div>
 
-              {/* Section 10 */}
+              {/* Section 9 */}
               <div className="mb-8">
                 <h2 className="text-2xl font-bold text-black dark:text-white mb-3 pb-2 border-b border-gray-200 dark:border-gray-700">
-                  10. Contact Us
+                  9. Contact Us
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-3">
                   If you have questions about these terms or anything else related to FitRoutine, feel free to reach out:
                 </p>
                 <div className="bg-gray-50 dark:bg-gray-700/50 rounded-xl p-4">
                   <p className="text-gray-700 dark:text-gray-300">
-                    📧 Email: <a href="mailto:info@fitroutine.com" className="text-primary hover:underline">info@fitroutine.com</a>
+                    📧 Email: <a href="mailto:info@fitroutine.online" className="text-primary hover:underline">info@fitroutine.online</a>
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 mt-2">
                     🌐 Website: <Link href="/contact" className="text-primary hover:underline">Contact Form</Link>

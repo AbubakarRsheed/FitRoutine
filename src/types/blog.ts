@@ -40,4 +40,5 @@ export type Blog = {
   readingTime?: number;
   featured?: boolean;
   seo?: SeoData;
+  
 };
