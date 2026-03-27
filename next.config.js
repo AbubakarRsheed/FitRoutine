@@ -1,6 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Remove output: 'export' for server-side rendering
   images: {
     remotePatterns: [
       {
@@ -16,18 +15,24 @@ const nextConfig = {
     formats: ['image/avif', 'image/webp'],
   },
   
-  // Internationalization - Global Reach
-  i18n: {
-    locales: ['en-US', 'en-GB', 'en-IN', 'en-PK', 'en-CA', 'en-AU'],
-    defaultLocale: 'en-US',
-    localeDetection: true,
-  },
+  // ❌ REMOVE i18n - App Router mein support nahi hai
+  // ✅ App Router mein internationalization alag tarike se handle hoti hai
+  // i18n: {
+  //   locales: ['en-US', 'en-GB', 'en-IN', 'en-PK', 'en-CA', 'en-AU'],
+  //   defaultLocale: 'en-US',
+  //   localeDetection: true,
+  // },
   
   // Compression for faster loading
   compress: true,
   
-  // Swc minification for better performance
-  swcMinify: true,
+  // ❌ REMOVE swcMinify - ab default hai, extra option error deta hai
+  // swcMinify: true,
+  
+  // Turbopack config for lockfile warning
+  turbopack: {
+    root: __dirname,
+  },
   
   // Headers for SEO and caching
   async headers() {
