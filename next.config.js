@@ -11,30 +11,28 @@ const nextConfig = {
         hostname: "randomuser.me",
       },
     ],
-    // Modern image formats for better speed
     formats: ['image/avif', 'image/webp'],
   },
   
-  // ❌ REMOVE i18n - App Router mein support nahi hai
-  // ✅ App Router mein internationalization alag tarike se handle hoti hai
-  // i18n: {
-  //   locales: ['en-US', 'en-GB', 'en-IN', 'en-PK', 'en-CA', 'en-AU'],
-  //   defaultLocale: 'en-US',
-  //   localeDetection: true,
-  // },
-  
-  // Compression for faster loading
   compress: true,
   
-  // ❌ REMOVE swcMinify - ab default hai, extra option error deta hai
-  // swcMinify: true,
+  // Remove serverRuntimeConfig - it's invalid in Next.js 16
+  // ❌ DELETE this line:
+  // serverRuntimeConfig: {},
   
-  // Turbopack config for lockfile warning
-  turbopack: {
-    root: __dirname,
+  // Add this for development
+  devIndicators: {
+    buildActivity: true,
   },
   
-  // Headers for SEO and caching
+  // Add allowed origins for development (fixes localhost issues)
+  allowedDevOrigins: ['localhost', '127.0.0.1', '192.168.1.29'],
+  
+  // Optional: Disable Turbopack if you're having memory issues
+  // experimental: {
+  //   turbo: false,
+  // },
+  
   async headers() {
     return [
       {
@@ -74,10 +72,7 @@ const nextConfig = {
     ];
   },
   
-  // Enable React Strict Mode for better development
   reactStrictMode: true,
-  
-  // Powered by header remove karein (optional security)
   poweredByHeader: false,
 };
 

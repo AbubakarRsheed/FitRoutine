@@ -61,29 +61,30 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 overflow-hidden py-12 px-4 sm:py-16 md:py-20 lg:py-28">
+      <div className="container mx-auto max-w-7xl">
         <SectionTitle
           title="What Our Global Community Says"
           paragraph="Join 50,000+ people worldwide who have transformed their lives with FitRoutine. Read their inspiring stories and see how we've helped people from every corner of the world achieve their health goals."
           center
         />
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+        {/* Responsive Grid Layout */}
+        <div className="grid grid-cols-1 gap-6 sm:gap-8 md:grid-cols-2 lg:grid-cols-3 px-2 sm:px-4 md:px-6">
           {testimonialData.map((testimonial) => (
             <SingleTestimonial key={testimonial.id} testimonial={testimonial} />
           ))}
         </div>
       </div>
       
-      {/* Background SVGs - keep your existing code */}
-      <div className="absolute left-0 top-0 z-[-1]">
+      {/* Responsive Background SVGs - optimized for all devices */}
+      <div className="absolute left-0 top-0 z-[-1] w-full h-full overflow-hidden pointer-events-none">
         <svg
-          width="1440"
-          height="969"
+          className="w-full h-auto min-w-[320px]"
           viewBox="0 0 1440 969"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          preserveAspectRatio="xMidYMid slice"
         >
           <mask
             id="mask0_95:1005"
