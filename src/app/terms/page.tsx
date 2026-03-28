@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -237,7 +236,7 @@ export default function TermsPage() {
               {/* Footer Note */}
               <div className="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700 text-center">
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Thank you for being part of FitRoutine. We're glad to have you here.
+                  Thank you for being part of FitRoutine. We&apos;re glad to have you here.
                 </p>
                 <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
                   © {currentYear} FitRoutine. All rights reserved.

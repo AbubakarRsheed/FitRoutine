@@ -16,8 +16,8 @@ export default function DMCAPage() {
                 Copyright Infringement Notification
               </h2>
               <p>
-                FitRoutine respects the intellectual property rights of others and expects its users to do the same. 
-                In accordance with the Digital Millennium Copyright Act ("DMCA"), we will respond promptly to claims 
+                FitRoutine respects the intellectual property rights of others and expects its users to do the same.{' '}
+                In accordance with the Digital Millennium Copyright Act (&quot;DMCA&quot;), we will respond promptly to claims{' '}
                 of copyright infringement that are reported to our designated copyright agent.
               </p>
             </section>
@@ -27,7 +27,7 @@ export default function DMCAPage() {
                 How to File a Complaint
               </h2>
               <p>
-                If you believe that your copyrighted work has been copied in a way that constitutes copyright 
+                If you believe that your copyrighted work has been copied in a way that constitutes copyright{' '}
                 infringement and is accessible on this site, please notify our copyright agent with the following information:
               </p>
               <ul className="list-disc pl-6 mt-3 space-y-2">
@@ -58,9 +58,9 @@ export default function DMCAPage() {
                 Counter-Notification
               </h2>
               <p>
-                If you believe that your material was removed or disabled by mistake or misidentification, 
-                you may file a counter-notification with us. Upon receipt of a valid counter-notification, 
-                we will forward it to the complaining party and restore the material unless we receive notice 
+                If you believe that your material was removed or disabled by mistake or misidentification,{' '}
+                you may file a counter-notification with us. Upon receipt of a valid counter-notification,{' '}
+                we will forward it to the complaining party and restore the material unless we receive notice{' '}
                 that a court action has been filed.
               </p>
             </section>
@@ -70,7 +70,7 @@ export default function DMCAPage() {
                 Repeat Infringers
               </h2>
               <p>
-                FitRoutine reserves the right to terminate user accounts and access to the website for users 
+                FitRoutine reserves the right to terminate user accounts and access to the website for users{' '}
                 who are repeat infringers of copyrighted material.
               </p>
             </section>

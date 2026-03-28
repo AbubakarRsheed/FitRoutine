@@ -1,4 +1,3 @@
-
 import Header from "@/components/Header";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -105,14 +104,14 @@ export default function PrivacyPolicyPage() {
               </ul>
               <p className="mt-2">To exercise these rights, please contact us using the information below.</p>
 
-              <h2 className="text-2xl font-bold mt-8 mb-4">7. Children's Privacy</h2>
+              <h2 className="text-2xl font-bold mt-8 mb-4">7. Children&apos;s Privacy</h2>
               <p>Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13. If you believe we have collected such information, please contact us immediately.</p>
 
               <h2 className="text-2xl font-bold mt-8 mb-4">8. International Data Transfers</h2>
               <p>Your information may be transferred to and maintained on servers located outside your country of residence. By using our website, you consent to such transfers.</p>
 
               <h2 className="text-2xl font-bold mt-8 mb-4">9. Changes to This Privacy Policy</h2>
-              <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the "Last Updated" date. You are advised to review this page periodically for any changes.</p>
+              <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new policy on this page and updating the &quot;Last Updated&quot; date. You are advised to review this page periodically for any changes.</p>
 
               <h2 className="text-2xl font-bold mt-8 mb-4">10. Contact Us</h2>
               <p>If you have any questions about this Privacy Policy, please contact us:</p>
