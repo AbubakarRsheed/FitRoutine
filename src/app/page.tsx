@@ -1,7 +1,6 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Blog from "@/components/Blog";
-
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
@@ -12,9 +11,9 @@ import Testimonials from "@/components/Testimonials";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Fitroutine",
-  description: "This is Home for Fitroutine",
-  // other metadata
+  title: "Fitroutine - Health & Fitness Blog | Weight Loss Tips & Workouts",
+  description: "Discover expert health and fitness tips, weight loss strategies, home workouts, and wellness guides. Join Fitroutine for a healthier lifestyle.",
+  keywords: "fitness blog, weight loss tips, home workouts, health guides, wellness tips",
 };
 
 export default function Home() {
@@ -22,15 +21,12 @@ export default function Home() {
     <>
       <ScrollUp />
       <Hero />
-       <Blog />
+      <Blog />
       <Features />
-     
-   
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />
       <Pricing />
-     
       <Contact />
     </>
   );

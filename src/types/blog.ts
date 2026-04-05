@@ -1,3 +1,5 @@
+// src/types/blog.ts
+
 export type Author = {
   name: string;
   image: string;
@@ -7,6 +9,7 @@ export type Author = {
     twitter?: string;
     linkedin?: string;
     facebook?: string;
+    instagram?: string;
   };
 };
 
@@ -32,7 +35,7 @@ export type Blog = {
   image: string;
   author: Author;
   tags: string[];
-  categories?: string[];
+  categories: string[];
   publishDate: string;
   lastModified?: string;
   slug: string;
@@ -40,5 +43,10 @@ export type Blog = {
   readingTime?: number;
   featured?: boolean;
   seo?: SeoData;
-  
+  // Add these new fields for SEO
+  seoTitle?: string;
+  seoDescription?: string;
+  keywords?: string[];
 };
+
+export default Blog;
