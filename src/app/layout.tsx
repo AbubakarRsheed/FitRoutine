@@ -21,8 +21,12 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
+        {/* ========== FAVICON ========== */}
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/favicon.png" />
+        
         {/* ========== GLOBAL SEO TAGS ========== */}
-        {/* Geo Targeting - Worldwide */}
         <meta name="geo.region" content="US-UK-CA-AU-IN-PK" />
         <meta name="geo.placename" content="Global" />
         <meta name="distribution" content="global" />
@@ -32,18 +36,9 @@ export default function RootLayout({
         <meta name="copyright" content="FitRoutine" />
         <meta name="author" content="FitRoutine Experts Team" />
         
-        {/* ========== HREFLANG - International SEO ========== */}
+        {/* ========== HREFLANG ========== */}
         <link rel="alternate" href="https://fitroutine.online" hrefLang="x-default" />
         <link rel="alternate" href="https://fitroutine.online" hrefLang="en" />
-        <link rel="alternate" href="https://fitroutine.online" hrefLang="en-us" />
-        <link rel="alternate" href="https://fitroutine.online" hrefLang="en-gb" />
-        <link rel="alternate" href="https://fitroutine.online" hrefLang="en-ca" />
-        <link rel="alternate" href="https://fitroutine.online" hrefLang="en-au" />
-        <link rel="alternate" href="https://fitroutine.online" hrefLang="en-in" />
-        <link rel="alternate" href="https://fitroutine.online" hrefLang="en-pk" />
-        
-        {/* ========== AD SENSE VERIFICATION (Add after approval) ========== */}
-        {/* <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXXXXX" /> */}
         
         {/* ========== GOOGLE ANALYTICS ========== */}
         <Script
@@ -58,12 +53,6 @@ export default function RootLayout({
             gtag('config', 'G-5E0X1B9N27');
           `}
         </Script>
-        
-        {/* ========== EMAILJS CONFIG (Optional - if you want to use EmailJS instead of nodemailer) ========== */}
-        {/* <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-        <script type="text/javascript">
-          (function(){ emailjs.init("YOUR_PUBLIC_KEY"); })();
-        </script> */}
       </head>
       
       <body 
