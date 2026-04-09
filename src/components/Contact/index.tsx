@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
-import NewsLatterBox from "./NewsLatterBox";
+import { useState, useEffect } from "react";
 
 const Contact = () => {
+  const [mounted, setMounted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -13,6 +13,11 @@ const Contact = () => {
     message: string;
   }>({ type: null, message: "" });
   const [loading, setLoading] = useState(false);
+
+  // Fix hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,6 +32,27 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     setStatus({ type: null, message: "" });
+
+    // Validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setStatus({
+        type: "error",
+        message: "Please fill in all fields",
+      });
+      setLoading(false);
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setStatus({
+        type: "error",
+        message: "Please enter a valid email address",
+      });
+      setLoading(false);
+      return;
+    }
 
     try {
       const response = await fetch("/api/contact", {
@@ -52,18 +78,23 @@ const Contact = () => {
         });
       }
     } catch (error) {
+      console.error("Error:", error);
       setStatus({
         type: "error",
         message: "Network error. Please check your connection and try again.",
       });
     } finally {
       setLoading(false);
-      // Auto clear status after 5 seconds
       setTimeout(() => {
         setStatus({ type: null, message: "" });
       }, 5000);
     }
   };
+
+  // Don't render anything during SSR to prevent hydration mismatch
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
@@ -168,7 +199,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="w-full px-4 lg:w-5/12 xl:w-4/12">
-            <NewsLatterBox />
+            {/* Right side content can go here */}
           </div>
         </div>
       </div>
