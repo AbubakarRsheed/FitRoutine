@@ -128,50 +128,10 @@ export default function BlogPage() {
           </div>
 
           {/* Pagination - Better for SEO & User Experience */}
-          <div className="flex justify-center mt-12">
-            <nav className="flex items-center gap-2">
-              <button 
-                disabled 
-                className="px-3 py-2 rounded-md bg-gray-200 text-gray-500 cursor-not-allowed dark:bg-gray-700"
-              >
-                Previous
-              </button>
-              <button className="px-3 py-2 rounded-md bg-primary text-white">1</button>
-              <button className="px-3 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-white">
-                2
-              </button>
-              <button className="px-3 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-white">
-                3
-              </button>
-              <button className="px-3 py-2 rounded-md bg-gray-200 text-gray-700 hover:bg-gray-300 dark:bg-gray-700 dark:text-white">
-                Next
-              </button>
-            </nav>
-          </div>
+          
 
           {/* Newsletter Signup - For User Engagement & SEO */}
-          <div className="mt-16 bg-primary/10 rounded-2xl p-8 text-center">
-            <h3 className="text-2xl font-bold text-black dark:text-white mb-3">
-              Get Weekly Fitness Tips
-            </h3>
-            <p className="text-body-color mb-6 max-w-2xl mx-auto">
-              Join our community and get the latest workout guides, healthy recipes, 
-              and wellness advice delivered to your inbox every week.
-            </p>
-            <div className="flex flex-wrap justify-center gap-3">
-              <input 
-                type="email" 
-                placeholder="Your email address" 
-                className="px-5 py-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 w-full max-w-sm"
-              />
-              <button className="px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition">
-                Subscribe
-              </button>
-            </div>
-            <p className="text-xs text-body-color mt-3">
-              No spam. Unsubscribe anytime.
-            </p>
-          </div>
+          
         </div>
       </section>
     </>
