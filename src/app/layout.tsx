@@ -18,6 +18,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <head>
+        
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         
@@ -53,6 +54,8 @@ export default function RootLayout({
             gtag('config', 'G-5E0X1B9N27');
           `}
         </Script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3192258216479154"
+     crossOrigin="anonymous"></script>
       </head>
       
       <body 
