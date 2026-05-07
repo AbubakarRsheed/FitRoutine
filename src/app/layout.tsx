@@ -54,8 +54,11 @@ export default function RootLayout({
             gtag('config', 'G-5E0X1B9N27');
           `}
         </Script>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3192258216479154"
-     crossOrigin="anonymous"></script>
+        <Script
+  src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6737948953933761"
+  strategy="afterInteractive"
+  crossOrigin="anonymous"
+/>
       </head>
       
       <body 
